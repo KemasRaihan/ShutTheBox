@@ -22,6 +22,7 @@
     <ClInclude Include="Board.h" />
     <ClInclude Include="Dice.h" />
     <ClInclude Include="Game.h" />
+    <ClInclude Include="Tile.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Board.cpp" />

@@ -3,8 +3,9 @@
 
 class Dice
 {
-static const int min = 1;
-static const int max = 6;
+
+	static const int min = 1;
+	static const int max = 6;
 
 public: 
 	static inline int roll();

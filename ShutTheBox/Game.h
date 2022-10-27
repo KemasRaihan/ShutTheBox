@@ -6,7 +6,7 @@
 struct Player
 {
 	int score;
-	Player(int score) : score(score) {}
+	Player() : score(0) {}
 };
 
 class Game
@@ -15,28 +15,30 @@ public:
 	Game();
 	~Game();
 
+	void calculateFinalScore(); // add all remaining tile numbers to the final score
+	inline int chooseTile(); // get user to choose a tile number to flip
+	void chooseTilesToFlip(const int& sumNeeded);
+	inline void displayFinalScore() const; // display the score or print 'Congratulations, you have shut the box!' if score = 0
 	void play(); // play 'Shut The Box' game
+	void showTilesChosen(const int* tilesChosen, const int& numberOfTilesChosen); // show tiles that have been chosen by the user during each throw
 
-	inline void addScore(const int amount); // add all tile numbers to player's score
-	static inline int choose(); // get user to choose a tile number to flip
 
 private:
-	Board* board;
+	class Board* board;
 	Player* player;
 };
 
-
-inline void Game::addScore(const int amount)
-{
-	player->score += amount;
-}
-
-int Game::choose()
+inline int Game::chooseTile()
 {
 	int number;
 	std::cin >> number;
 	return number;
 }
+
+
+
+
+
 
 
 

@@ -6,7 +6,7 @@ using namespace std;
 int main()
 {
 #ifdef _DEBUG
-	//  _CrtSetBreakAlloc(87);
+	  _CrtSetBreakAlloc(150);
 	_onexit(_CrtDumpMemoryLeaks);
 #endif
 
